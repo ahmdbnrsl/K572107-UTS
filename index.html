@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Harry Potter - Scrolly Telling</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<!-- Background Musik -->
+		<!-- <audio id="bg-music" autoplay loop>
+			<source src="assets/sounds/battle-theme.mp3" type="audio/mp3" />
+			Browser Anda tidak mendukung audio.
+		</audio> -->
+
+		<!-- Navbar -->
+		<nav>
+			<div class="logo">
+				<img
+					src="assets/images/hogwarts.png"
+					alt="Hogwarts Logo"
+					class="logo"
+				/>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="#intro">Beranda</a></li>
+					<li><a href="#hogwarts">Hogwarts</a></li>
+					<li><a href="#quidditch">Quidditch</a></li>
+					<li><a href="#battle">Pertarungan</a></li>
+				</ul>
+			</div>
+			<div class="tombol-menu">
+				<div class="garis"></div>
+				<div class="garis"></div>
+				<div class="garis"></div>
+			</div>
+		</nav>
+
+		<!-- Intro -->
+		<section id="intro" class="full-screen">
+			<video autoplay muted loop id="follower">
+				<source src="assets/videos/0319.mp4" type="video/mp4" />
+			</video>
+			<div class="overlay"></div>
+			<div class="intro-text">
+				<h1>Selamat Datang di Dunia Sihir</h1>
+				<div class="character"></div>
+				<div class="carousel-container">
+					<!-- <button id="prev">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="lucide lucide-chevron-left"
+						>
+							<path d="m15 18-6-6 6-6" />
+						</svg>
+					</button> -->
+
+					<div class="carousel">
+						<div popovertarget="myheader" class="carousel-item">
+							<p>Hufflepuff</p>
+							<div class="popover">
+								<img
+									class="popover-content"
+									src="assets/images/hufflepuff.webp"
+									alt="Hufflepuff"
+								/>
+								<div class="keterangan">
+									<h3>Hufflepuff</h3>
+									<p>
+										Hufflepuff menekankan kerja keras,
+										kesetiaan, dan keadilan, menciptakan
+										lingkungan yang suportif dan kolaboratif
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div popovertarget="myheader" class="carousel-item">
+								<p>Gryffindor</p>
+								<div class="popover">
+									<img
+										class="popover-content"
+										src="assets/images/gryffindor.webp"
+										alt="Gryffindor"
+									/>
+									<div class="keterangan">
+										<h3>Gryffindor</h3>
+										<p>
+											Gryffindor menonjolkan keberanian
+											dan jiwa kepahlawanan, mendorong
+											para penyihirnya untuk berani
+											menghadapi bahaya demi melakukan
+											yang benar
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div popovertarget="myheader" class="carousel-item">
+								<p>Slytherin</p>
+								<div class="popover">
+									<img
+										class="popover-content"
+										src="assets/images/shlytherin.webp"
+										alt="Slytherin"
+									/>
+									<div class="keterangan">
+										<h3>Slytherin</h3>
+										<p>
+											Slytherin mengedepankan ambisi,
+											kecerdikan, dan tekad, menghasilkan
+											penyihir yang strategis dan
+											berorientasi pada pencapaian tujuan
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div popovertarget="myheader" class="carousel-item">
+								<p>Ravenclaw</p>
+								<div class="popover">
+									<img
+										class="popover-content"
+										src="assets/images/ravenclaw.webp"
+										alt="Gryffindor"
+									/>
+									<div class="keterangan">
+										<h3>Ravenclaw</h3>
+										<p>
+											Ravenclaw mengapresiasi kecerdasan
+											dan kreativitas, sehingga anggotanya
+											selalu haus akan pengetahuan dan
+											inovasi
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- <button id="next">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="lucide lucide-chevron-right"
+						>
+							<path d="m9 18 6-6-6-6" />
+						</svg>
+					</button> -->
+				</div>
+				<div class="character"></div>
+			</div>
+		</section>
+
+		<!-- Hogwarts -->
+		<section id="hogwarts">
+			<div class="content">
+				<h2>Hogwarts</h2>
+				<p>Sekolah sihir tempat Harry dan teman-temannya belajar.</p>
+				<!-- <img src="assets/images/hogwarts.jpg" alt="Hogwarts" /> -->
+			</div>
+		</section>
+
+		<!-- Quidditch -->
+		<section id="quidditch">
+			<div class="content">
+				<h2>Quidditch</h2>
+				<p>Olahraga sihir paling populer di dunia.</p>
+				<!-- <img src="assets/images/quidditch.jpg" alt="Quidditch" /> -->
+				<button id="play-whistle">Putar Suara Peluit</button>
+			</div>
+		</section>
+
+		<!-- Pertarungan -->
+		<section id="battle">
+			<div class="content">
+				<h2>Pertarungan Terakhir</h2>
+				<p>Harry vs Voldemort - Pertarungan epik terakhir!</p>
+				<!-- <img
+					src="assets/images/harry-vs-voldemort.jpg"
+					alt="Pertarungan"
+				/> -->
+				<button id="cast-spell">Lempar Mantra</button>
+			</div>
+		</section>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>

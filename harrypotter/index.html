@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Potter - Scrolly Telling</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Background Musik -->
+    <audio id="bg-music" autoplay loop>
+      <source src="assets/sounds/battle-theme.mp3" type="audio/mp3" />
+      Browser Anda tidak mendukung audio.
+    </audio>
+
+    <!-- Navbar -->
+    <nav>
+      <div class="logo">
+        <img src="assets/images/hogwarts-logo.jpg" alt="Hogwarts Logo" />
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#intro">Beranda</a></li>
+          <li><a href="#hogwarts">Hogwarts</a></li>
+          <li><a href="#quidditch">Quidditch</a></li>
+          <li><a href="#battle">Pertarungan</a></li>
+        </ul>
+      </div>
+      <div class="tombol-menu">
+        <div class="garis"></div>
+        <div class="garis"></div>
+        <div class="garis"></div>
+      </div>
+    </nav>
+
+    <!-- Intro -->
+    <section id="intro" class="full-screen">
+      <video autoplay muted loop>
+        <source src="assets/videos/hogwarts-intro.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+      <div class="intro-text">
+        <h1>Selamat Datang di Dunia Sihir</h1>
+        <p>Ikuti perjalanan Harry Potter dalam dunia penuh keajaiban</p>
+      </div>
+    </section>
+
+    <!-- Hogwarts -->
+    <section id="hogwarts">
+      <div class="content">
+        <h2>Hogwarts</h2>
+        <p>Sekolah sihir tempat Harry dan teman-temannya belajar.</p>
+        <img src="assets/images/hogwarts.jpg" alt="Hogwarts" />
+      </div>
+    </section>
+
+    <!-- Quidditch -->
+    <section id="quidditch">
+      <div class="content">
+        <h2>Quidditch</h2>
+        <p>Olahraga sihir paling populer di dunia.</p>
+        <img src="assets/images/quidditch.jpg" alt="Quidditch" />
+        <button id="play-whistle">Putar Suara Peluit</button>
+      </div>
+    </section>
+
+    <!-- Pertarungan -->
+    <section id="battle">
+      <div class="content">
+        <h2>Pertarungan Terakhir</h2>
+        <p>Harry vs Voldemort - Pertarungan epik terakhir!</p>
+        <img src="assets/images/harry-vs-voldemort.jpg" alt="Pertarungan" />
+        <button id="cast-spell">Lempar Mantra</button>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

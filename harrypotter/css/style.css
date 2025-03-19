@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.904);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 100;
+}
+
+nav .menu ul {
+  list-style: none;
+  display: flex;
+}
+
+nav .menu ul li {
+  margin: 0 15px;
+}
+
+nav .menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.tombol-menu {
+  display: none;
+}
+
+/* Section */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.full-screen {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.full-screen video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.full-screen .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+button {
+  background: #c86b85;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  nav .menu ul {
+    display: none;
+    flex-direction: column;
+    background: black;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px;
+  }
+
+  nav .menu ul.show {
+    display: flex;
+  }
+
+  .tombol-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .tombol-menu .garis {
+    background: white;
+    height: 3px;
+    margin: 5px;
+    width: 30px;
+  }
+}
