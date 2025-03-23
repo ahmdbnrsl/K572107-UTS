@@ -5,6 +5,13 @@ const carousel = document.querySelector('.carousel');
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
 const carouselItem = document.querySelectorAll('.carousel-item');
+const internalHogwarts = document.querySelector('.internal-hogwarts-img');
+const homeAud = new Audio('assets/sounds/home.mp3');
+const hogwartsAud = new Audio('assets/sounds/hogwarts.mp3');
+const quidditchAud = new Audio('assets/sounds/quidditch.mp3');
+const quidditchH3 = document.querySelector('#quidditch > .intro-text > h1');
+const popoverQuidditch = document.querySelector('.popover-quidditch');
+const battleVideo = document.querySelector('#battle-video');
 
 function isInViewportWithPadding(element, paddingTop = 0, paddingBottom = 0) {
 	const rect = element.getBoundingClientRect();
@@ -16,8 +23,17 @@ function isInViewportWithPadding(element, paddingTop = 0, paddingBottom = 0) {
 
 document.addEventListener('DOMContentLoaded', function () {
 	// Toggle menu pada mobile
+
 	tombolMenu.addEventListener('click', function () {
 		menu.classList.toggle('show');
+	});
+
+	internalHogwarts.addEventListener('mouseover', function () {
+		internalHogwarts.style.opacity = 0;
+	});
+
+	internalHogwarts.addEventListener('mouseout', function () {
+		internalHogwarts.style.opacity = 1;
 	});
 
 	// Efek scroll (menambah background putih di navbar)
@@ -28,24 +44,48 @@ document.addEventListener('DOMContentLoaded', function () {
 		const contentHogwarts2 = document.querySelector('.hogwarts-contain-2');
 		const heightViewport = window.innerHeight;
 
-		if (window.scrollY > window.innerHeight) {
-			bg.style.opacity = (window.scrollY - window.innerHeight) / 1000;
-
-			console.log(window.scrollY - window.innerHeight);
+		if (window.scrollY < this.window.innerHeight) {
+			homeAud.play();
+		} else {
+			homeAud.pause();
 		}
 
-		if (window.scrollY > heightViewport * 3) {
-			nav.style.backgroundColor = 'white';
-			listMenu.forEach((item) => {
-				item.style.color = 'black';
-			});
-			nav.style.color = 'black';
+		if (
+			window.scrollY > this.window.innerHeight &&
+			window.scrollY < heightViewport * 3
+		) {
+			hogwartsAud.play();
+		} else if (window.scrollY < this.window.innerHeight) {
+			hogwartsAud.pause();
 		} else {
-			nav.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
-			listMenu.forEach((item) => {
-				item.style.color = 'white';
-			});
-			nav.style.color = 'white';
+			hogwartsAud.pause();
+		}
+
+		if (
+			window.scrollY > heightViewport * 3 &&
+			window.scrollY < heightViewport * 4 + heightViewport / 4
+		) {
+			quidditchAud.play();
+		} else if (window.scrollY < heightViewport * 4) {
+			quidditchAud.pause();
+		} else {
+			quidditchAud.pause();
+		}
+
+		if (window.scrollY > window.innerHeight) {
+			bg.style.opacity = (window.scrollY - window.innerHeight) / 1000;
+		}
+
+		// if (window.scrollY > heightViewport * 3 + heightViewport / 4) {
+		// 	nav.style.display = 'none';
+		// } else {
+		// 	nav.style.display = 'flex';
+		// }
+
+		if (window.scrollY > heightViewport * 4 + heightViewport / 4) {
+			battleVideo.play();
+		} else {
+			battleVideo.pause();
 		}
 
 		if (isInViewportWithPadding(contentHogwarts, 250, 250)) {
@@ -110,4 +150,14 @@ carouselItem.forEach((item) => {
 		popover.style.display = 'none';
 	});
 });
-console.log(carouselItem);
+
+quidditchH3.addEventListener('mouseover', () => {
+	popoverQuidditch.style.display = 'flex';
+	console.log(popover);
+});
+
+quidditchH3.addEventListener('mouseout', () => {
+	popoverQuidditch.style.display = 'none';
+});
+
+console.log(quidditchH3);

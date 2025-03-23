@@ -64,7 +64,7 @@ nav .menu ul li a {
 	overflow: hidden;
 }
 
-.full-screen video {
+#follower {
 	position: absolute;
 	width: 110vw; /* Oversize agar tetap full-screen meski bergeser */
 	height: 110vh;
@@ -203,7 +203,8 @@ nav .menu ul li a {
 	margin: 0 5px;
 }
 
-.keterangan {
+.keterangan,
+.keterangan-quidditch {
 	font-size: 0.6rem;
 	font-weight: 200;
 	width: 300px;
@@ -215,7 +216,8 @@ nav .menu ul li a {
 	height: fit-content;
 }
 
-.keterangan h3 {
+.keterangan h3,
+.keterangan-quidditch h3 {
 	font-size: 0.8rem;
 	font-weight: 700;
 	font-family: 'Almendra', serif;
@@ -223,7 +225,8 @@ nav .menu ul li a {
 	margin-bottom: 0.5rem;
 }
 
-.popover::before {
+.popover::before,
+.popover-quidditch::before {
 	content: '';
 	position: absolute;
 	bottom: -11px; /* sedikit lebih jauh untuk efek border */
@@ -233,7 +236,8 @@ nav .menu ul li a {
 	border-style: solid;
 	border-color: #ccc transparent transparent transparent;
 }
-.popover::after {
+.popover::after,
+.popover-quidditch::after {
 	content: '';
 	position: absolute;
 	bottom: -10px; /* tepat di bawah popover */
@@ -379,6 +383,110 @@ button {
 	background-color: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(2px);
 	-webkit-text-stroke: 0.1px black;
+	display: flex;
+	gap: 1rem;
+	position: static;
+}
+
+.internal-hogwarts {
+	width: 40%;
+
+	border-radius: 2rem;
+	border: #eaeaea solid 1px;
+	overflow: hidden;
+	position: relative;
+}
+.internal-hogwarts-img,
+.internal-hogwarts-img-2 {
+	width: 100%;
+	object-fit: cover;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.internal-hogwarts-img {
+	z-index: 2;
+	transition: all 1s ease-in-out;
+}
+.internal-hogwarts-img-2 {
+	z-index: 1;
+}
+
+.p-hogwarts-2 {
+	text-align: start;
+	width: 60%;
+}
+
+#quidditch,
+#battle {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	align-items: end;
+	border-top: #eaeaea solid 1px;
+}
+
+#quidditch > .intro-text > h1 {
+	font-size: 6rem;
+	font-family: 'Bigelow Rules', serif;
+	font-weight: 400;
+	font-style: normal;
+	-webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+	color: #eaeaea;
+	cursor: pointer;
+}
+
+#quidditch > .intro-text > h1:hover {
+	color: gold;
+	text-shadow: white 1px 0 10px;
+}
+
+.popover-quidditch {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, calc(-70% - 10px));
+	margin-bottom: 1rem;
+	background: rgba(147, 155, 7, 0.2);
+	backdrop-filter: blur(5px);
+	border: 1px solid gold;
+	border-radius: 10px 0 10px 0;
+	padding: 10px;
+	box-shadow: 0px 2px 6px rgba(127, 115, 5, 0.2);
+	z-index: 10000000000;
+	width: fit-content;
+	display: none;
+	gap: 12px;
+	align-items: center;
+}
+
+.popper-quidditch::before {
+	border-color: gold transparent transparent transparent;
+}
+.popover-quidditch::after {
+	border-color: gold transparent transparent transparent;
+}
+
+.keterangan-quidditch {
+	width: 100%;
+	font-size: 0.9rem;
+}
+
+.keterangan-quidditch h3 {
+	font-size: 1.4rem;
+}
+
+#quidditch-video,
+#battle-video {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	z-index: -1;
+	pointer-events: none;
 }
 
 /* Responsif */
