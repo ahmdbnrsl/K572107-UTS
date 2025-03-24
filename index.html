@@ -7,13 +7,6 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
-		<!-- Background Musik -->
-		<!-- <audio id="bg-music" autoplay loop>
-			<source src="assets/sounds/home.mp3" type="audio/mp3" />
-			Browser Anda tidak mendukung audio.
-		</audio> -->
-
-		<!-- Navbar -->
 		<nav>
 			<div class="logo">
 				<img
@@ -28,16 +21,48 @@
 					<li><a href="#hogwarts">Hogwarts</a></li>
 					<li><a href="#quidditch">Quidditch</a></li>
 					<li><a href="#battle">Pertarungan</a></li>
+					<li>
+						<button class="close-button">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="40"
+								height="40"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="lucide lucide-circle-x"
+							>
+								<circle cx="12" cy="12" r="10"></circle>
+								<path d="m15 9-6 6"></path>
+								<path d="m9 9 6 6"></path>
+							</svg>
+						</button>
+					</li>
 				</ul>
 			</div>
-			<div class="tombol-menu">
-				<div class="garis"></div>
-				<div class="garis"></div>
-				<div class="garis"></div>
-			</div>
+			<button class="tombol-menu">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="40"
+					height="40"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="lucide lucide-menu"
+				>
+					<line x1="4" x2="20" y1="12" y2="12"></line>
+					<line x1="4" x2="20" y1="6" y2="6"></line>
+					<line x1="4" x2="20" y1="18" y2="18"></line>
+				</svg>
+			</button>
 		</nav>
 
-		<!-- Intro -->
 		<section id="intro" class="full-screen">
 			<video autoplay muted loop id="follower">
 				<source src="assets/videos/0319.mp4" type="video/mp4" />
@@ -47,23 +72,6 @@
 				<h1>Selamat Datang di Dunia Sihir</h1>
 				<div class="character"></div>
 				<div class="carousel-container">
-					<!-- <button id="prev">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="lucide lucide-chevron-left"
-						>
-							<path d="m15 18-6-6 6-6" />
-						</svg>
-					</button> -->
-
 					<div class="carousel">
 						<div popovertarget="myheader" class="carousel-item">
 							<p>Hufflepuff</p>
@@ -133,7 +141,7 @@
 									<img
 										class="popover-content"
 										src="assets/images/ravenclaw.webp"
-										alt="Gryffindor"
+										alt="Ravenclaw"
 									/>
 									<div class="keterangan">
 										<h3>Ravenclaw</h3>
@@ -148,29 +156,11 @@
 							</div>
 						</div>
 					</div>
-
-					<!-- <button id="next">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="lucide lucide-chevron-right"
-						>
-							<path d="m9 18 6-6-6-6" />
-						</svg>
-					</button> -->
 				</div>
 				<div class="character"></div>
 			</div>
 		</section>
 
-		<!-- Hogwarts -->
 		<section id="hogwarts">
 			<img
 				src="assets/images/hogwarts.jpeg"
@@ -211,7 +201,6 @@
 								class="internal-hogwarts-img-2"
 							/>
 						</div>
-
 						<p class="p-hogwarts-2">
 							Setelah tiba di Hogwarts, para murid disortir ke
 							asrama masing-masing dan memulai petualangan baru di
@@ -256,18 +245,13 @@
 			</video>
 			<div class="intro-text">
 				<div class="popover-quidditch">
-					<!-- <img
-						class="popover-content"
-						src="assets/images/gryffindor.webp"
-						alt="Gryffindor"
-					/> -->
 					<div class="keterangan-quidditch">
-						<h3>​Quidditch</h3>
+						<h3>Quidditch</h3>
 						<p>
-							​Quidditch adalah olahraga sihir paling populer
-							dalam dunia Harry Potter, dimainkan di atas sapu
-							terbang oleh dua tim yang masing-masing terdiri dari
-							tujuh pemain. Setiap tim memiliki tiga Chaser yang
+							Quidditch adalah olahraga sihir paling populer dalam
+							dunia Harry Potter, dimainkan di atas sapu terbang
+							oleh dua tim yang masing-masing terdiri dari tujuh
+							pemain. Setiap tim memiliki tiga Chaser yang
 							bertugas mencetak gol dengan memasukkan Quaffle ke
 							dalam gawang lawan, dua Beater yang melindungi tim
 							dari Bludger, satu Keeper yang menjaga gawang, dan
@@ -286,34 +270,13 @@
 				<h1>Olahraga Quidditch</h1>
 			</div>
 		</section>
+
 		<section id="battle" class="full-screen">
 			<video loop id="battle-video">
 				<source src="assets/videos/battle.mp4" type="video/mp4" />
 			</video>
 		</section>
-		<!-- Quidditch -->
-		<!-- <section id="quidditch">
-			<div class="content">
-				<h2>Quidditch</h2>
-				<p>Olahraga sihir paling populer di dunia.</p>
-				<img src="assets/images/quidditch.jpg" alt="Quidditch" />
-				<button id="play-whistle">Putar Suara Peluit</button>
-			</div>
-		</section>
 
-		
-		<section id="battle">
-			<div class="content">
-				<h2>Pertarungan Terakhir</h2>
-				<p>Harry vs Voldemort - Pertarungan epik terakhir!</p>
-				<img
-					src="assets/images/harry-vs-voldemort.jpg"
-					alt="Pertarungan"
-				/>
-				<button id="cast-spell">Lempar Mantra</button>
-			</div>
-		</section> -->
-
-		<script src="js/script.js" nonce=""></script>
+		<script src="js/index.js" nonce=""></script>
 	</body>
 </html>
